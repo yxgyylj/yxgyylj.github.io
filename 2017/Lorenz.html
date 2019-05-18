@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>The CGL equation: the equation</title>
+		<link rel="stylesheet" href="tutorial-styles.css" type="text/css" />
+		<link rel="home" href="index.html" title="Xige's Homepage" />
+		<link rel="up" href="index.html" title="The Complex Ginzburg-Landau equation" />
+		<link rel="previous" href="index.html" title="Xige's Homepage" />
+		<link rel="next" href="history.html" title="Next page" />
+	</head>
+	<body>
+		<div class="navheader">
+			<table summary="Navigation header" width="100%">
+				<tbody>
+					<tr>
+						<th colspan="3" align="center">Interplaying between nonlinear dynamics, cell biology, and more</th>
+					</tr>
+					<tr>
+						<td class="leftlink"><a accesskey="p" href="index.html">Previous</a></td>
+						<td class="centerlink"></td>
+						<td class="rightlink"><a accesskey="n" href="history.html">Next</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<hr />
+		</div>
+		<h2 class="title">
+			2 Lorenz Strange Attractors.
+		</h2>
+		<div class="toc">
+			<dl>
+				<dt>2.1 <a href="background">Lorenz system</a></dt>
+			</dl>
+		 </div> 
+        <p> Lorenz attractor is first introduced by Edward Lorenz, an American mathematician, meteorologist who had made pioneering contributions in chaos theory. Lorenz's' original model involved of 12 nonlinear partial differential equations, but he managed to extract the essense of the complex system and simplified it into a set of 3 ODEs. The physical model is described as follows: </p>
+        
+		<div class="graph"><img src="https://people.math.osu.edu/yang.2677/Files/Imgs/Lorenz/ODE.jpg" alt="Lorenz" /></div>
+        
+        <p>On the surface these three equations seem simple to solve. However, they represent an extremely complicated dynamical system simply because of a simple nonlinearity on the right hand side. Numerical simulation of the system (with initial condition (x(0), y(0), z(0)) = ()) is as follows:
+		</p>
+		<p>
+        and if we perturb the initial conditions a little bit, the animation of the system will behave like this:
+        </p>
+        <img class="candy" src="Experiments/Java/lorenz/Img/lorenz.gif" alt="Lorenz System"  style="width:480px;height:360px;" />
+		<p>
+		As indicated in the animation figure above, the word "chaos" originated from the fact that a tiny bias on initial conditions can result in a drastic change in solution as time growth, and the behavior of the solution is unpredictable due to its highly sensitivity on enviornmental noise. We see that the solutions of the system look a lot like butterflies, people ofter call the solution to be "Butterfly Effect".
+		</p>
+        <p>
+        Remark: the term "Butterfly Effect" does NOT originates from the wide-spreaded confusing claim "the flap of a butterfly’s wings in Brazil set off a tornado in Texas"."
+        </p>
+
+		<div class="navfooter"><hr />
+		<table summary="Navigation footer" width="100%">
+			<tbody>
+				<tr>
+					<td align="left"><a accesskey="p" href="index.html">Previous</a></td>
+					<td align="center"><a accesskey="u" href="index.html">Up</a></td>
+					<td align="right"><a accesskey="n" href="history.html">Next</a></td>
+				</tr>
+				<tr>
+					<td class="leftlink">Abstract</td>
+					<td class="centerlink"><a href="index.html">Home</a></td>
+					<td class="rightlink">1.1 History</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</body>
+</html>
