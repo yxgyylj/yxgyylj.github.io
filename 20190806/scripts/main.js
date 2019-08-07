@@ -1,6 +1,5 @@
-;(function (window) {
-  window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-  window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
+(function (window) {
+
 
   const FRAME_RATE = 60
   const PARTICLE_NUM = 3000
