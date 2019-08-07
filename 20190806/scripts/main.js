@@ -22,7 +22,7 @@ window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
     quiver = true,
     text = texts[0],
     textIndex = 0,
-    textSize = CANVASWIDTH/9
+    textSize = 60
 
   function draw () {
     ctx.clearRect(0, 0, CANVASWIDTH, CANVASHEIGHT)
