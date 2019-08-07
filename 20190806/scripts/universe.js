@@ -63,7 +63,7 @@ function Star() {
     this.fadingIn = true;
     this.opacity = 0;
     this.opacityTresh = getRandInterval(.2, 1 - (this.comet + 1 - 1) * .4);
-    this.do = getRandInterval(0.01, 0.1) + (this.comet + 1 - 1) * .01;
+    this.do = getRandInterval(0.005, 0.02) + (this.comet + 1 - 1) * .01;
   };
 
   this.fadeIn = function() {
