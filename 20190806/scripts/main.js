@@ -1,4 +1,3 @@
-(function (window) {
 window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
 window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
 
@@ -224,4 +223,4 @@ window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
     init()
   // }, 4000);
   // mp3.play()
-})(window)
+
