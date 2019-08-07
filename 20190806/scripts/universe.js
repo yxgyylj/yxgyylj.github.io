@@ -1,3 +1,4 @@
+(function (window) {
 window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
   window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
@@ -148,3 +149,4 @@ function windowResizeHandler() {
   canva.setAttribute('width', width);
   canva.setAttribute('height', height);
 }
+})(window)
