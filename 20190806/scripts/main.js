@@ -5,8 +5,8 @@
   const FRAME_RATE = 60
   const PARTICLE_NUM = 3000
   const RADIUS = Math.PI * 2
-  const CANVASWIDTH = 500
-  const CANVASHEIGHT = 150
+  const CANVASWIDTH = window.innerWidth;
+  const CANVASHEIGHT = window.innerHeight;
   const CANVASID = 'canvas'
 
   let texts = ['亲爱的','于洋小仙女', '我们相隔数千里',
@@ -22,7 +22,7 @@
     quiver = true,
     text = texts[0],
     textIndex = 0,
-    textSize = 70
+    textSize = 50
 
   function draw () {
     ctx.clearRect(0, 0, CANVASWIDTH, CANVASHEIGHT)
@@ -163,7 +163,7 @@
       let spread = canvas.height
       let size = Math.random() * 3
       // 速度
-      this.delta = 0.05
+      this.delta = 0.08
       // 现在的位置
       this.x = 0
       this.y = 0
