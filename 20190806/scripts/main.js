@@ -4,13 +4,13 @@ window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
 
   const FRAME_RATE = 60
   const PARTICLE_NUM = 3000
-  const RADIUS = Math.PI * 1.5
+  const RADIUS = Math.PI * 2
   const CANVASWIDTH = window.innerWidth;
   const CANVASHEIGHT = window.innerHeight;
   const CANVASID = 'canvas'
 
-  let texts = ['亲爱的','于洋小仙女', '我们相聚数千里',
-  '间隔群山峻岭','此时此刻', '你看不见我', '我看不见你', '但是 你看那',
+  let texts = ['亲爱的','于洋小仙女','此时此刻', '我们相距千里',
+  '间隔群山峻岭', '你看不见我', '我看不见你', '但是 你看那',
    '满天的繁星', '都同样的闪耀', '认识你 遇见你', '是一种缘分',
    '更是我的幸运','我想你','如果你也想我','请相信',
  '金风玉露一相逢', '便胜却人间无数',
@@ -22,7 +22,7 @@ window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
     quiver = true,
     text = texts[0],
     textIndex = 0,
-    textSize = 60
+    textSize = 50
 
   function draw () {
     ctx.clearRect(0, 0, CANVASWIDTH, CANVASHEIGHT)
@@ -225,4 +225,3 @@ window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
     init()
   // }, 4000);
   // mp3.play()
-
