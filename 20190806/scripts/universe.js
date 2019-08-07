@@ -2,7 +2,7 @@
 window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
   window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-var starDensity = .216;
+var starDensity = .108;
 var speedCoeff = .04;
 var width;
 var height;
