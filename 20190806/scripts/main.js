@@ -1,4 +1,6 @@
 (function (window) {
+window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
 
 
   const FRAME_RATE = 60
