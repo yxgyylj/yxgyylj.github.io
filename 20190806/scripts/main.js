@@ -4,7 +4,7 @@ window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
 
   const FRAME_RATE = 60
   const PARTICLE_NUM = 3000
-  const RADIUS = Math.PI * 1.5
+  const RADIUS = Math.PI * 2
   const CANVASWIDTH = window.innerWidth;
   const CANVASHEIGHT = window.innerHeight;
   const CANVASID = 'canvas'
@@ -161,7 +161,7 @@ window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
   class Particle {
     constructor (canvas) {
       let spread = canvas.height
-      let size = Math.random() * 2
+      let size = Math.random() * .3 + 1
       // 速度
       this.delta = 0.08
       // 现在的位置
