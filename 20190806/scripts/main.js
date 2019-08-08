@@ -161,7 +161,7 @@ window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
   class Particle {
     constructor (canvas) {
       let spread = canvas.height
-      let size = Math.random() * .3 + 1.5
+      let size = Math.random() * .3 + CANVASWIDTH / 800
       // 速度
       this.delta = 0.08
       // 现在的位置
