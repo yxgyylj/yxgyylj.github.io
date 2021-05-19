@@ -3,7 +3,7 @@ window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
 
 
   const FRAME_RATE = 60
-  const PARTICLE_NUM = 3000
+  const PARTICLE_NUM = 5000
   const RADIUS = Math.PI * 2
   const CANVASWIDTH = window.innerWidth;
   const CANVASHEIGHT = window.innerHeight;
@@ -22,7 +22,11 @@ window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
     quiver = true,
     text = texts[0],
     textIndex = 0,
+<<<<<<< HEAD
     textSize = 45
+=======
+    textSize = CANVASWIDTH / 9
+>>>>>>> e457bdf0ca8244230b57af8825f409426116db3f
 
   function draw () {
     ctx.clearRect(0, 0, CANVASWIDTH, CANVASHEIGHT)
@@ -161,7 +165,7 @@ window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
   class Particle {
     constructor (canvas) {
       let spread = canvas.height
-      let size = Math.random() * 2
+      let size = Math.random() * .3 + CANVASWIDTH / 900
       // 速度
       this.delta = 0.08
       // 现在的位置
