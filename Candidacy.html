@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Candidacy</title>
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="home" href="index.html" title="Xige Yang's homepage" />
+	</head>
+	<body>
+		<div class="navheader">
+			<table summary="Navigation header" width="100%">
+				<tbody>
+					<tr>
+						<th align="right">Interplaying between nonlinear dynamics, cell biology, and more</th>
+					</tr>
+					<tr>
+						<td align="left"><a accesskey="n" href="../index.html">Home</a></td>
+						<td align="right"><a accesskey="n" href="CaOsci.html">Other Researches</a></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				<td align="center">
+				<h3><a href="index.html">Home</a> || <a href="Files/CV.pdf">Curriculum Vitae</a> || <a href="teaching.html">Teaching</a> || <a href="../personal/personal.html">中文</a></h3></td>
+			  </tr>
+			  <tr>
+				<td align="left">&nbsp;</td>
+			  </tr>
+			</table>
+			
+			<hr />
+		</div>
+		<h1 class="title">
+			Candidacy Researches
+		</h1>
+		<h3 class="author">
+			<span class="firstname">Xige</span>
+			<span class="surname">Yang</span>
+		</h3>
+
+		<p class="title"><b> Mathematical Modeling in Cell and Molecular Biology</b></p>
+		<p>
+		Dynamic system is a mathematical branch studying complex behavior of the nature, and it's attracting more and more attentions nowadays. All above animation gifs are examples of (continuous or discrete) dynamic system.
+		Click the above animations to see the details</p>
+		
+		<p>
+		Below are some small computer experiments I've done.
+		</p>
+
+		<hr />
+		<p class="title"><b> Research Topics </b></p>
+		<div class="toc">
+				<h4> <a name="Chemotaxis">1. Cell Chemotaxis</a> </h4>
+				
+				<hr />
+
+				<h4> <a name="Cytoskeleton">2. Cytoskeleton Dynamics</a> </h4>
+				<p> A neuron (a nerve cell) is an electrically excitable cell that 
+				integrates and transmits information as part of the nervous system.
+				<img src="Imgs/Neuron.jpg" align="right" /> Axons 
+				are long slender projections of nerve cells that permit fast and 
+				specific electrical communication with other cells over long distances. The 
+				ability of nerve cells to extend and maintain these processes is critically 
+				dependent on the cytoskeleton.
+				</p>
+				
+				<p>
+				Microtubules and neurofilaments are both long polymers that align in parallel 
+				along the long axis of the axon, forming a continuous overlapping array that 
+				extends from the cell body to the axon tip. 
+				<img src="Imgs/AxonTransportation.jpg" align="left" width="40%"/>
+				In healthy axons, microtubules and neurofilaments align along the axon and 
+				are interspersed in axonal. However, in many toxic neurodegenerative disorders 
+				these two populations of polymers separate from each other, with microtubules 
+				and organelles located near the long axis of the axon and neurofilaments 
+				displaced to the periphery near the axonal cross-sections. For example, in 
+				a sequence of <a href="http://neurofilament.osu.edu/publications/">experiments</a> 
+				done by Prof. Brown's group in Ohio State University, when they apply a 
+				toxic chemical called IDPN (3,3’-iminodiproprionitrile) in physiological 
+				saline to adult male rats, a strong microtubule-neurofilament segregation 
+				was reported. However, the segregation process is reversible, and wash-out 
+				happen in hours.
+				</p>
+
+				<p>
+				From the experiments above, we can ask the following questions:
+				</p>
+				<ul>
+					<li> How do microtubules and neurofilaments segregate each other under 
+					abnormal situations?</li>
+					<li>Why does the segregation phenomena occur on a time scale of hours 
+					and is reversible? </li>
+					<li>How is segregation related to impairment of neurofilament transport
+					 and axonal swelling?</li>
+				</ul>
+				
+				<p>
+				To answer these questions, we need at first to construct a mathematical model.
+				We offer two different modeling strategies -- <b>agent based model </b> and 
+				<b>continuous model </b>. Agent based model treats every cytoskeleton (microtubule
+				or neurofilament) as a "agent", and use physical laws to describe their 
+				dynamics:
+				</p>
+				
+				<img class="candy" src="Experiments/Python/Bifurcation/lorenz_ode_3d.png" alt="Lorenz System"  style="width:480px;height:360px;" />
+				
+				<p>This project is partially supported by NSF grant #1312966. More details 
+				can be found on my <a href="Presentations/CandidacyPresentation_final.pdf">
+				<i>candidacy exam presentation</i></a>.</p>
+				
+				<ol> <b>References: </b> <br />
+					<li> Xue C, Shtylla B, Brown A (2015) <i>A Stochastic Multiscale Model That Explains the Segregation of Axonal Microtubules and Neurofilaments in Neurological Diseases.</i> PLoS Comput Biol 11(8): e1004406. doi:10.1371/journal. pcbi.1004406 </li>
+					<li> Brown A. In: Pfaff DW, editor. <i>Axonal Transport. Neuroscience in the 21st century.</i> Springer; 2013.</li>
+				</ol>
+				
+				<hr />
+
+				<h4> <a name="SHS">3. Hybrid Methods</a> </h4>
+				<p> Multiscale modelling challenges occur frequently throughout cell 
+				biology and molecular biology, especially in the context of cell migration
+				or cell polarization. To solve multiscale problems, both stochastic and PDE 
+				modeling approaches have been well studied and in various of similar context
+				in biology. </p>
+				
+				<p>
+				Generally speaking, stochastic models are easier to parameterize, can be 
+				used to integrate underlying biological phenomena, but hard to analyze 
+				mathematically and can be more computational expensive. PDE models, 
+				However, are amenable to mathematical analysis and computational methods 
+				are well-developed. But on one hand, since various biological processes (typically 
+				occurring on different time or length scales) are usually lumped together,
+				it make parameters involved in PDEs difficult to obtain; On the other hand, 
+				PDE models are sometimes controversial since they are not able to provide 
+				all the details involved in a biological process. 
+				</p>
+				
+				<p>
+				Taking account all those 
+				considerations above, it is important to find underline connections of different
+				approaches, so that we can make better decisions on <b>WHEN</b> and <b>WHERE</b> 
+				to use <b>WHICH </b> models.
+				</p>
+				
+				<p>
+				We thereby propose two different approaches to study multiscale problems:
+				</p>
+				
+				<ul>
+					<li> Using stochastic hybrid system (similar to the ideas of <a href="http://www.proba.jussieu.fr/pageperso/tankov/tankov_voltchkova.pdf"><i>
+					diffusion jump process </i></a>, <a href="http://page.math.tu-berlin.de/~papapan/papers/introduction.pdf"><i>
+					Levy process </i></a> or <a href="http://www.springer.com/us/book/9781441911049"><i>
+					hybrid switching diffusions </i></a>), to see how stochastic behavior can
+					be approximated by a PDE counterpart. </li>
+					
+					<li> Using PDE-assisted hybrid methods, to separate our problems into
+					different geometric domains, and apply different strategies on each
+					particular domain. This approach has been well studied in the context
+					of computation. </li>
+				</ul>
+				
+				<p>More details of stochastic hybrid system can be found in the last pages
+				of my <a href="Presentations/CandidacyPresentation_final.pdf">
+				<i>candidacy exam presentation</i></a>, and numerical algorithm of
+				hybrid methods can be found in my presentation
+				<a href="Presentations/HybridMethod.pdf">
+				<i>PDE-assisted hybrid methods</i></a>.</p>
+				
+				<ol> <b>References: </b> <br />
+					<li> J. Hu, J. Lygeros, S. Sastry (2000) <i>Towards a Theory of Stochastic Hybrid Systems,</i> HSCC, 2000 - Springer </li>
+					<li> B. Franz, M.B. Flegg, S.J. Chapman, R. Erban (2013) <i>Multiscale Reaction-Diffusion Algorithms: PDE-Assisted Brownian Dynamics,</i> SIAM J. Appl. Math., 73(3), 1224–1247. (24 pages)</li>
+					<li> Spill, F., Guerrero, P., Alarcon, T., Maini, P. K., and Byrne, H., 2015, <i>Hybrid Approaches for Multiple-Species Stochastic Reaction–Diffusion Models,</i> J. Comput. Phys., 299, pp. 429–445.</li>
+				</ol>
+		</div>
+		
+		<hr />
+
+	</body>
+</html>

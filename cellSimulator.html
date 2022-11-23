@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Xige Yang's Simulator</title>
+    <link rel="stylesheet" href="tutorial-styles.css" type="text/css" />
+    <link rel="home" href="index.html" title="Xige Yang's homepage" />
+</head>
+
+<meta property="og:title" content="Cells Configuration" /><title>Cells Configuration</title>
+<div class="gridContainer clearfix">
+<div>
+  <div id="header">
+    <h1> A Simple Partical Based Model Simulator</h1>
+    <br>
+  </div>
+  <br>
+
+</div>
+<br>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64782759-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</div>
+
+<div id="whole" class="gridContainer clearfix">
+
+
+
+
+
+<div id="body">
+
+
+</div>
+
+
+
+<div id="area">
+<h2>
+  <script type="text/javascript">
+  document.write(document.title)
+  </script> 
+  </h2>
+      <p> You can set paramater of number of particles, movoment velocity and the parameter of force field function. In this simulator, the positions are calculated recurrently by this function.</p>
+      <p align="center"><b>Position<sub>t+1</sub>(x,y)=v*Force(x,y)+Position<sub>t</sub>(x,y)</b></p>
+      <p align="center"><b>Force(x,y)=Σ(i≠j) v*Vector<sub>ij</sub>(x,y)*Log(Distance<sub>ij</sub>/d)/(Distance<sub>ij</sub>/d)</b></p>
+      <p align="center"><b>Vector<sub>ij</sub>(x,y)=Position<sub>t,j</sub>(x,y)-Position<sub>t,i</sub>(x,y)</b></p>
+      <p align="center"><b>Distance<sub>ij</sub>=|Vector<sub>ij</sub>|</b></p>
+      <p>You can see the particles gathering to a circle formation. It is because all particles attract  each other to the distance of d value, however, particles nearer than d value are distracted.</p></div>
+
+<div id="kuuhaku"><br>
+</div>
+<div id="graph">
+
+    <div id="chart_div" style="margin-right:auto; margin-left:auto;height: 500px;"></div>
+</div>
+<div id="area2">
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+	
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = new google.visualization.DataTable();
+        var data_temp = new google.visualization.DataTable();
+      data.addColumn('number');
+      data.addColumn('number');
+        data_temp.addColumn('number');
+      data_temp.addColumn('number');
+	
+      var radius = 100;
+
+var ppppp=form1.ppppp.value;
+
+      for(i=0;i<ppppp;i++){
+      data.addRow([ (Math.random() - 0.5)*100, (Math.random() - 0.5)*100]);
+        data_temp.addRow([10,10]);
+	  }
+	    
+      var options = {
+      	    hAxis: {minValue: -100, maxValue: 100},
+          vAxis: {minValue: -100, maxValue: 100},
+	  	   dataOpacity: 0.3,
+        legend: 'none',
+        colors: ['#087037'],
+        //pointShape: 'star',
+        pointSize: 15,
+        animation: {
+          duration: 1,
+          easing: 'inAndOut',
+	  	    
+        }
+      };
+
+      var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+
+      // Start the animation by listening to the first 'ready' event.
+      google.visualization.events.addOneTimeListener(chart, 'ready', randomWalk);
+
+      // Control all other animations by listening to the 'animationfinish' event.
+      google.visualization.events.addListener(chart, 'animationfinish', randomWalk);
+
+      chart.draw(data, options);
+      		       
+		       function sign(n) {
+    return (n > 0) ? 1 : (n < 0) ? -1 : 0;
+}
+		
+      function randomWalk() {
+      	       var v=form1.v.value;
+	       	   var d=form1.d.value;
+		       
+			var i=0;  
+			    var ppppp=form1.ppppp.value;//Number(form1.nn.value)*1;
+			    	for(i=0;i<ppppp;i++){
+						
+							var dx=0;
+							    var dy=0;
+							    	
+        var xi = data.getValue(data.getNumberOfRows() - ppppp+i, 0);
+        var yi = data.getValue(data.getNumberOfRows() - ppppp+i, 1);
+	    
+		for(j=0;j<ppppp;j++){
+				
+					if(i==j){continue;}
+						
+							var xj = data.getValue(data.getNumberOfRows() - ppppp+j, 0);
+        var yj = data.getValue(data.getNumberOfRows() - ppppp+j, 1);
+	    
+		//x=y=2;
+			var vecx=xj-xi;
+			    var vecy=yj-yi;
+			    	
+					var dist2=vecx*vecx+vecy*vecy;
+					    var dist=Math.pow(dist2,0.5);
+					    	var tan_=vecy/vecx;
+
+						    var st=(Math.log(dist/d)/(dist/d));
+						    	dx+=v*vecx/dist*st;
+								dy+=v*vecy/dist*st
+									
+										}
+											
+        xi +=+dx ;//0.0 * (Math.random() - 0.5);
+        yi +=+dy ;//0.0 * (Math.random() - 0.5);
+
+
+        data_temp.setValue(data_temp.getNumberOfRows() - ppppp+i, 0, xi);
+        data_temp.setValue(data_temp.getNumberOfRows() - ppppp+i, 1, yi);
+						       }
+							
+								for(i=0;i<ppppp;i++){
+									data.setValue(data.getNumberOfRows() - ppppp+i, 0,  data_temp.getValue(data_temp.getNumberOfRows() - ppppp+i, 0));
+        data.setValue(data.getNumberOfRows() - ppppp+i, 1,  data_temp.getValue(data_temp.getNumberOfRows() - ppppp+i, 1));
+					     }
+        chart.draw(data_temp, options);
+      }
+    }
+  </script>
+  
+  
+  <form style="text-align : center ;" name="form1">
+        Number of Points<br>
+        
+        <input type="number" value="20" name="ppppp" min="0" max="1000" onChange="drawChart()">
+        
+        <br>
+        v : Moving Velocity<br>
+        
+        <input type="number" value="0.20" name="v" min="0.00" step="0.05" max="5">
+        
+        <br>
+        d : Best Distance<br>
+        
+        <input type="number" value="40" name="d" min="0" max="1000">
+        
+        <br>        <br>
+        <input type="button" value="Restart" onclick="drawChart()" style="width:100px;height:30px">
+        </div>
+
+ <br>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '910417665697420',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+
+<br/><br/>
+<div id="footer" align="center" style="background-color:#004">
+
+
+         <div class="copyright">Copyright &copy; 2015 BioMath Modeler All Rights Reserved.</div>
+      </div><!-- /#footer -->
+
+
+
+
+</div>
+</body>
+</html>
+
+
