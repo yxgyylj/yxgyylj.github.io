@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>给 Gloria 的道歉信</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			Boy name = <span class="keyword"> 杨大宝 <br />
+			Girl name = <span class="keyword"> 高小宝 <br />
+			<span class="comments">// 2023年5月28日. </span><br />
+			<span class="comments">// 他们开始相爱. </span><br />
+				男孩喜欢上了女孩;<br />
+				女孩喜欢上了男孩;<br />
+			<span class="comments">// 然而...</span><br />
+				在2023年6月28日这一天<br />
+				女孩遇到了好多好多烦心的事<br />
+			<span class="comments">// 学习上好多好多作业没做完</span><br />
+			<span class="comments">// 工作上遇到了不好的RM</span><br />
+			<span class="comments">// 快一个月没和父母联系了</span><br />
+				就在这种情况下...<br />
+				男孩不仅没有很好地理解女孩的处境<br />
+				还自以为是<br />
+				伤了女孩的心<br />
+				<br>
+				男孩反省了好久好久 <br />
+				内心做了许多许多争斗 <br />
+				最后想郑重地说一声：<br />
+			<span class="placeholder"/> 宝贝，我错了 <br />
+			<span class="placeholder"/> 希望你能原谅我 <br />
+			<span class="placeholder"> 男孩希望女孩始终能够开开心心的<br />
+			<br>
+				此外
+				男孩还想告诉女孩:<br />
+				宝宝，我会永远陪在你的身边<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					小宝，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					我以后会更主动地尝试去理解你 <br/>
+					尽最大努力不再惹你不开心。 <br/>
+					<div class="signature">- 杨大宝</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2023, 4, 28);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 5000);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
